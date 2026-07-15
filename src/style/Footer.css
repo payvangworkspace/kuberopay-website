@@ -13,7 +13,8 @@
 =========================== */
 
 .site-footer{
-    background:linear-gradient(160deg,#0a1330,#111d47 55%,#0a1330);
+    background:#ffffff;
+    border-top:1px solid rgba(10,19,48,.08);
     padding:80px 32px 0;
 }
 
@@ -42,12 +43,12 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#0a1330;
+    color:#ffffff;
     flex-shrink:0;
 }
 
 .footer-brand h3{
-    color:#e5b654;
+    color:#9c1c42;
     font-size:22px;
     font-weight:700;
     font-family:"Georgia", serif;
@@ -56,7 +57,7 @@
 .footer-brand span{
     display:block;
     margin-top:2px;
-    color:#94a3b8;
+    color:#64748b;
     font-size:10.5px;
     letter-spacing:1.5px;
     text-transform:uppercase;
@@ -79,21 +80,21 @@
 }
 
 .contact-icon{
-    color:#e0a63a;
+    color:#c8862a;
     font-size:18px;
     margin-top:3px;
     flex-shrink:0;
 }
 
 .contact-row p{
-    color:#e2e8f0;
+    color:#3a0f1f;
     font-size:16px;
     line-height:1.7;
     margin:0;
 }
 
 .contact-row a{
-    color:#5eb3f0;
+    color:#9c1c42;
     font-size:16px;
     text-decoration:none;
 }
@@ -103,7 +104,7 @@
 }
 
 .lei-text{
-    color:#ffffff;
+    color:#0a1330;
     font-size:15px;
     font-weight:700;
 }
@@ -113,13 +114,13 @@
 =========================== */
 
 .footer-bottom{
-    border-top:1px solid rgba(255,255,255,.1);
+    border-top:1px solid rgba(10,19,48,.08);
     padding:26px 0;
     text-align:center;
 }
 
 .footer-bottom p{
-    color:#94a3b8;
+    color:#64748b;
     font-size:14px;
     line-height:1.8;
     margin:0;

@@ -2,20 +2,16 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 
 /* ---------- design tokens (kept in one place for easy re-theming) ---------- */
-const ink = "#0a1628";
-const gold = "#c9a227";
-const teal = "#4ecdc4";
-const paper = "#f6f4ee";
+const ink = "#161616";
+const gold = "#c9911f";
+const goldDark = "#b37e1a";
+const paper = "#f7f6f3";
 
 /* ---------- small building blocks ---------- */
 
-function Eyebrow({ children, dark }) {
+function Eyebrow({ children }) {
   return (
-    <div
-      className={`inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.25em] uppercase ${
-        dark ? "text-[#4ecdc4]" : "text-[#0f8f86]"
-      }`}
-    >
+    <div className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.25em] uppercase text-[#b37e1a]">
       <span className="w-6 h-px bg-current opacity-60" />
       {children}
     </div>
@@ -24,9 +20,9 @@ function Eyebrow({ children, dark }) {
 
 function StatCard({ value, label }) {
   return (
-    <div className="border-l border-white/10 pl-5 py-1">
-      <div className="font-serif text-3xl sm:text-4xl text-white">{value}</div>
-      <div className="mt-1 text-xs tracking-wide text-white/50 max-w-[16ch]">
+    <div className="border-l border-[#161616]/10 pl-5 py-1">
+      <div className="font-serif text-3xl sm:text-4xl text-[#161616]">{value}</div>
+      <div className="mt-1 text-xs tracking-wide text-[#161616]/50 max-w-[16ch]">
         {label}
       </div>
     </div>
@@ -35,11 +31,11 @@ function StatCard({ value, label }) {
 
 function FeatureRow({ icon, title }) {
   return (
-    <div className="flex items-center gap-4 border-t border-[#0a1628]/10 py-4 first:border-t-0">
-      <div className="shrink-0 w-9 h-9 rounded-full bg-[#0a1628] text-[#4ecdc4] flex items-center justify-center">
+    <div className="flex items-center gap-4 border-t border-[#161616]/10 py-4 first:border-t-0">
+      <div className="shrink-0 w-9 h-9 rounded-full bg-[#161616] text-[#c9911f] flex items-center justify-center">
         {icon}
       </div>
-      <span className="font-medium text-[#0a1628]">{title}</span>
+      <span className="font-medium text-[#161616]">{title}</span>
     </div>
   );
 }
@@ -47,8 +43,8 @@ function FeatureRow({ icon, title }) {
 function GoldButton({ children, className = "" }) {
   return (
     <button
-      className={`px-8 py-3.5 rounded-full bg-[#4ecdc4] text-[#0a1628] text-sm font-semibold
-                  shadow-md shadow-[#4ecdc4]/20 hover:bg-[#3dbdb5] hover:-translate-y-px
+      className={`px-8 py-3.5 rounded-full bg-[#c9911f] text-[#161616] text-sm font-semibold
+                  shadow-md shadow-[#c9911f]/25 hover:bg-[#b37e1a] hover:-translate-y-px
                   transition-all duration-200 cursor-pointer ${className}`}
     >
       {children}
@@ -59,8 +55,8 @@ function GoldButton({ children, className = "" }) {
 function GhostButton({ children, className = "" }) {
   return (
     <button
-      className={`px-8 py-3.5 rounded-full border border-[#0a1628]/20 text-[#0a1628] text-sm font-semibold
-                  hover:border-[#0a1628]/40 hover:bg-[#0a1628]/[0.03] transition-all duration-200 cursor-pointer ${className}`}
+      className={`px-8 py-3.5 rounded-full border border-[#161616]/20 text-[#161616] text-sm font-semibold
+                  hover:border-[#161616]/40 hover:bg-[#161616]/[0.03] transition-all duration-200 cursor-pointer ${className}`}
     >
       {children}
     </button>
@@ -71,16 +67,16 @@ function Input({ label, type = "text", textarea, optional }) {
   const Tag = textarea ? "textarea" : "input";
   return (
     <label className="block">
-      <span className="block text-xs font-mono tracking-wide uppercase text-[#0a1628]/40 mb-2">
+      <span className="block text-xs font-mono tracking-wide uppercase text-[#161616]/40 mb-2">
         {label}
-        {optional && <span className="text-[#0a1628]/25"> · optional</span>}
+        {optional && <span className="text-[#161616]/25"> · optional</span>}
       </span>
       <Tag
         type={textarea ? undefined : type}
         rows={textarea ? 4 : undefined}
-        className="w-full rounded-xl border border-[#0a1628]/15 bg-white px-4 py-3 text-sm text-[#0a1628]
-                   placeholder:text-[#0a1628]/30 focus:outline-none focus:ring-2 focus:ring-[#4ecdc4]/50
-                   focus:border-[#4ecdc4] transition-colors resize-none"
+        className="w-full rounded-xl border border-[#161616]/15 bg-white px-4 py-3 text-sm text-[#161616]
+                   placeholder:text-[#161616]/30 focus:outline-none focus:ring-2 focus:ring-[#c9911f]/50
+                   focus:border-[#c9911f] transition-colors resize-none"
       />
     </label>
   );
@@ -156,30 +152,30 @@ export default function MerchantServiceReseller() {
   const active = tracks[track];
 
   return (
-    <div className="font-sans text-[#0a1628] bg-white">
+    <div className="font-sans text-[#161616] bg-white">
       <Navbar />
 
       {/* ============ HERO ============ */}
-      <section className="relative pt-20 bg-[#0a1628] overflow-hidden">
+      <section className="relative pt-20 bg-white overflow-hidden border-b border-[#161616]/5">
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.06]"
+          className="pointer-events-none absolute inset-0 opacity-[0.05]"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(transparent, transparent 34px, rgba(255,255,255,0.6) 35px)",
+              "repeating-linear-gradient(transparent, transparent 34px, rgba(22,22,22,0.6) 35px)",
           }}
         />
         <div className="relative max-w-6xl mx-auto px-8 sm:px-12 lg:px-8 py-24 lg:py-32">
-          <Eyebrow dark>Merchant Service Reseller Program</Eyebrow>
-          <h1 className="mt-6 font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-white max-w-3xl">
+          <Eyebrow>Merchant Service Reseller Program</Eyebrow>
+          <h1 className="mt-6 font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-[#161616] max-w-3xl">
             Your book of business is worth more than one commission.
           </h1>
-          <p className="mt-7 text-lg text-white/60 max-w-xl leading-relaxed">
+          <p className="mt-7 text-lg text-[#161616]/60 max-w-xl leading-relaxed">
             Partner with Kubero Payment and turn every merchant referral into a
             payment you collect month after month — not a one-time finder's fee.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <GoldButton>Get Started</GoldButton>
-            <button className="text-sm font-medium text-white/70 hover:text-white transition-colors underline underline-offset-4 decoration-white/20">
+            <button className="text-sm font-medium text-[#161616]/70 hover:text-[#161616] transition-colors underline underline-offset-4 decoration-[#161616]/20">
               See how residuals work ↓
             </button>
           </div>
@@ -194,22 +190,22 @@ export default function MerchantServiceReseller() {
       </section>
 
       {/* ============ TRACK SELECTOR — the signature interactive element ============ */}
-      <section className="bg-[#f6f4ee]">
+      <section className="bg-[#f7f6f3]">
         <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-8 py-24">
           <Eyebrow>Two ways to partner</Eyebrow>
-          <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-[#0a1628] max-w-xl">
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-[#161616] max-w-xl">
             Pick the path that matches how you already work.
           </h2>
 
-          <div className="mt-10 inline-flex rounded-full border border-[#0a1628]/15 bg-white p-1">
+          <div className="mt-10 inline-flex rounded-full border border-[#161616]/15 bg-white p-1">
             {Object.entries(tracks).map(([key, t]) => (
               <button
                 key={key}
                 onClick={() => setTrack(key)}
                 className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer ${
                   track === key
-                    ? "bg-[#0a1628] text-white"
-                    : "text-[#0a1628]/50 hover:text-[#0a1628]"
+                    ? "bg-[#c9911f] text-[#161616]"
+                    : "text-[#161616]/50 hover:text-[#161616]"
                 }`}
               >
                 {t.label}
@@ -219,16 +215,16 @@ export default function MerchantServiceReseller() {
 
           <div className="mt-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-start">
             <div>
-              <h3 className="font-serif text-2xl sm:text-3xl text-[#0a1628] leading-snug">
+              <h3 className="font-serif text-2xl sm:text-3xl text-[#161616] leading-snug">
                 {active.heading}
               </h3>
-              <p className="mt-5 text-[#0a1628]/60 leading-relaxed max-w-lg">
+              <p className="mt-5 text-[#161616]/60 leading-relaxed max-w-lg">
                 {active.copy}
               </p>
               <ul className="mt-8 space-y-3">
                 {active.bullets.map((b) => (
-                  <li key={b} className="flex items-center gap-3 text-sm text-[#0a1628]/80">
-                    <span className="w-5 h-5 rounded-full bg-[#4ecdc4]/15 text-[#0f8f86] flex items-center justify-center shrink-0">
+                  <li key={b} className="flex items-center gap-3 text-sm text-[#161616]/80">
+                    <span className="w-5 h-5 rounded-full bg-[#c9911f]/15 text-[#b37e1a] flex items-center justify-center shrink-0">
                       {icons.check}
                     </span>
                     {b}
@@ -239,9 +235,9 @@ export default function MerchantServiceReseller() {
             </div>
 
             {/* mock "commission ledger" card — grounded in the payments/residual subject matter */}
-            <div className="rounded-2xl bg-[#0a1628] p-8 shadow-2xl shadow-[#0a1628]/20">
-              <div className="flex items-center gap-2 font-mono text-[11px] tracking-[0.2em] uppercase text-[#4ecdc4]">
-                <span className="w-2 h-2 rounded-full bg-[#4ecdc4]" />
+            <div className="rounded-2xl bg-white border border-[#161616]/10 p-8 shadow-xl shadow-black/5">
+              <div className="flex items-center gap-2 font-mono text-[11px] tracking-[0.2em] uppercase text-[#b37e1a]">
+                <span className="w-2 h-2 rounded-full bg-[#c9911f]" />
                 Sample residual statement
               </div>
               <div className="mt-6 space-y-4">
@@ -251,13 +247,13 @@ export default function MerchantServiceReseller() {
                   ["Your revenue share", "0.35%"],
                   ["Est. monthly residual", "$168.70"],
                 ].map(([k, v]) => (
-                  <div key={k} className="flex items-center justify-between border-b border-white/10 pb-3 last:border-b-0 last:pb-0">
-                    <span className="text-sm text-white/45">{k}</span>
-                    <span className="text-sm font-medium text-white">{v}</span>
+                  <div key={k} className="flex items-center justify-between border-b border-[#161616]/10 pb-3 last:border-b-0 last:pb-0">
+                    <span className="text-sm text-[#161616]/45">{k}</span>
+                    <span className="text-sm font-medium text-[#161616]">{v}</span>
                   </div>
                 ))}
               </div>
-              <p className="mt-6 text-xs text-white/35 leading-relaxed">
+              <p className="mt-6 text-xs text-[#161616]/35 leading-relaxed">
                 Illustrative only — actual residuals scale with each merchant's
                 real processing volume, for as long as the account stays active.
               </p>
@@ -267,34 +263,34 @@ export default function MerchantServiceReseller() {
       </section>
 
       {/* ============ RELIABLE PAYOUTS ============ */}
-      <section className="bg-[#0a1628] relative overflow-hidden">
+      <section className="bg-white relative overflow-hidden border-y border-[#161616]/5">
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.05]"
+          className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(transparent, transparent 34px, rgba(255,255,255,0.6) 35px)",
+              "repeating-linear-gradient(transparent, transparent 34px, rgba(22,22,22,0.6) 35px)",
           }}
         />
         <div className="relative max-w-6xl mx-auto px-8 sm:px-12 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <Eyebrow dark>Reliable payouts</Eyebrow>
-            <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-white leading-snug">
+            <Eyebrow>Reliable payouts</Eyebrow>
+            <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-[#161616] leading-snug">
               As long as they process, you get paid.
             </h2>
-            <p className="mt-6 text-white/60 leading-relaxed max-w-md">
+            <p className="mt-6 text-[#161616]/60 leading-relaxed max-w-md">
               Resellers earn percentage-based residuals across our full range
               of credit card processing services. There's no cliff, no
               expiration — just an ongoing share of what your merchants run
               through their accounts.
             </p>
-            <p className="mt-5 text-sm text-[#4ecdc4] font-medium">
+            <p className="mt-5 text-sm text-[#b37e1a] font-medium">
               ✳ Ask about our current reseller loyalty offer
             </p>
             <GoldButton className="mt-8">Connect With Us</GoldButton>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
-            <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-white/40">
+          <div className="rounded-2xl border border-[#161616]/10 bg-[#f7f6f3] p-8">
+            <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-[#161616]/40">
               Payout cadence
             </div>
             <div className="mt-6 space-y-5">
@@ -305,9 +301,9 @@ export default function MerchantServiceReseller() {
                 { d: "Repeats automatically", t: "Every month" },
               ].map((row, i) => (
                 <div key={row.d} className="flex items-center gap-4">
-                  <span className="w-2 h-2 rounded-full bg-[#4ecdc4] shrink-0" />
-                  <span className="text-sm text-white/80 flex-1">{row.d}</span>
-                  <span className="text-xs font-mono text-white/40">{row.t}</span>
+                  <span className="w-2 h-2 rounded-full bg-[#c9911f] shrink-0" />
+                  <span className="text-sm text-[#161616]/80 flex-1">{row.d}</span>
+                  <span className="text-xs font-mono text-[#161616]/40">{row.t}</span>
                 </div>
               ))}
             </div>
@@ -316,20 +312,20 @@ export default function MerchantServiceReseller() {
       </section>
 
       {/* ============ PARTNERSHIP DETAIL ============ */}
-      <section className="bg-white">
+      <section className="bg-[#f7f6f3]">
         <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <Eyebrow>Partner with Kubero Payment</Eyebrow>
-            <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-[#0a1628] leading-snug">
+            <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-[#161616] leading-snug">
               Merchant Services Reseller Partnership
             </h2>
-            <p className="mt-6 text-[#0a1628]/60 leading-relaxed">
+            <p className="mt-6 text-[#161616]/60 leading-relaxed">
               Kuber Payment is a merchant services provider built for easy
               integration — an API-hosted gateway, a quick sign-up process,
               and no monthly minimums or dues standing between your referral
               and their first transaction.
             </p>
-            <p className="mt-4 text-[#0a1628]/60 leading-relaxed">
+            <p className="mt-4 text-[#161616]/60 leading-relaxed">
               Resellers treat our gateway as the standard they recommend, and
               partnering unlocks a no-pressure relationship: send merchant
               referrals whenever they come up, and loyalty rewards higher
@@ -351,20 +347,20 @@ export default function MerchantServiceReseller() {
       </section>
 
       {/* ============ WEB DEVELOPER PARTNERSHIP ============ */}
-      <section className="bg-[#f6f4ee]">
+      <section className="bg-white">
         <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <Eyebrow>For builders</Eyebrow>
-            <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-[#0a1628] leading-snug">
+            <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-[#161616] leading-snug">
               Web Developer Partnership
             </h2>
-            <p className="mt-6 text-[#0a1628]/60 leading-relaxed">
+            <p className="mt-6 text-[#161616]/60 leading-relaxed">
               You build the storefronts. Recommending Kubero Payment means the
               clients you hand off to can accept payments securely from
               customers anywhere in the world — without you fielding support
               tickets about it later.
             </p>
-            <p className="mt-4 text-[#0a1628]/60 leading-relaxed">
+            <p className="mt-4 text-[#161616]/60 leading-relaxed">
               Every integration ships with 24/7 security monitoring,
               chargeback mitigation, and fraud protection baked in.
             </p>
@@ -385,13 +381,13 @@ export default function MerchantServiceReseller() {
       </section>
 
       {/* ============ SIGN UP FORM ============ */}
-      <section className="bg-[#0a1628]">
+      <section className="bg-[#f7f6f3]">
         <div className="max-w-3xl mx-auto px-8 sm:px-12 lg:px-8 py-24 text-center">
-          <Eyebrow dark>Ready when you are</Eyebrow>
-          <h2 className="mt-4 font-serif text-4xl text-white">
+          <Eyebrow>Ready when you are</Eyebrow>
+          <h2 className="mt-4 font-serif text-4xl text-[#161616]">
             Sign up with Kubero Payment
           </h2>
-          <p className="mt-4 text-white/50 max-w-md mx-auto">
+          <p className="mt-4 text-[#161616]/50 max-w-md mx-auto">
             Join the leading payment processing partner. Seamless, reliable,
             and easy to integrate — for you and everyone you refer.
           </p>
@@ -400,7 +396,7 @@ export default function MerchantServiceReseller() {
         <div className="max-w-3xl mx-auto px-8 sm:px-12 lg:px-8 pb-24">
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="bg-white rounded-2xl p-8 sm:p-10 grid sm:grid-cols-2 gap-6"
+            className="bg-white rounded-2xl p-8 sm:p-10 grid sm:grid-cols-2 gap-6 border border-[#161616]/10 shadow-xl shadow-black/5"
           >
             <Input label="First Name" />
             <Input label="Last Name" />
@@ -416,8 +412,8 @@ export default function MerchantServiceReseller() {
             <div className="sm:col-span-2">
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl bg-[#4ecdc4] text-[#0a1628] text-sm font-bold tracking-wide
-                           hover:bg-[#3dbdb5] transition-colors cursor-pointer"
+                className="w-full py-4 rounded-xl bg-[#c9911f] text-[#161616] text-sm font-bold tracking-wide
+                           hover:bg-[#b37e1a] transition-colors cursor-pointer"
               >
                 SIGN UP NOW
               </button>

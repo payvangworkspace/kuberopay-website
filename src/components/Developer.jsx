@@ -91,7 +91,7 @@ const platforms = [
 ];
 
 function InlineHighlight({ children }) {
-  return <span className="text-[#2f7fe0] font-semibold">{children}</span>;
+  return <span className="text-[#b37e1a] font-semibold">{children}</span>;
 }
 
 export default function Developer() {
@@ -100,15 +100,15 @@ export default function Developer() {
       <Navbar />
 
       {/* ============ SEAMLESS INTEGRATION ============ */}
-      <section className="relative bg-gradient-to-b from-[#0a1628] to-[#12335c] pt-20 pb-24 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-white to-[#f7f6f3] pt-20 pb-24 overflow-hidden">
         <div className="max-w-6xl mx-auto px-8 sm:px-12">
-          <div className="rounded-3xl bg-[#f6f8fb] shadow-2xl shadow-black/40 p-10 sm:p-14 grid lg:grid-cols-[1.05fr_0.95fr] gap-14 items-start">
+          <div className="rounded-3xl bg-white border border-[#161616]/8 shadow-xl shadow-black/10 p-10 sm:p-14 grid lg:grid-cols-[1.05fr_0.95fr] gap-14 items-start">
             <div>
-              <h1 className="font-serif text-4xl sm:text-5xl text-[#0a1628]">
+              <h1 className="font-serif text-4xl sm:text-5xl text-[#161616]">
                 Seamless Integration
               </h1>
 
-              <p className="mt-7 text-[#0a1628]/70 text-lg leading-relaxed">
+              <p className="mt-7 text-[#161616]/70 text-lg leading-relaxed">
                 Integrating payments with{" "}
                 <InlineHighlight>Kubero Pays</InlineHighlight> is
                 effortless. Use SDKs, REST APIs, and plugins across major
@@ -116,10 +116,10 @@ export default function Developer() {
                 <InlineHighlight>real-time performance</InlineHighlight>.
               </p>
 
-              <h2 className="mt-9 font-serif text-2xl text-[#0a1628]">
+              <h2 className="mt-9 font-serif text-2xl text-[#161616]">
                 Integrate easily with:
               </h2>
-              <ul className="mt-4 space-y-2.5 text-[#0a1628]/75">
+              <ul className="mt-4 space-y-2.5 text-[#161616]/75">
                 {[
                   "Client APIs for PHP, Python, JAVA, Node.js, .NET",
                   "Web Checkout: JavaScript",
@@ -128,13 +128,13 @@ export default function Developer() {
                   "Hybrid Apps: Cordova",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#0a1628]/40 shrink-0" />
+                    <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#161616]/40 shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
 
-              <p className="mt-9 text-[#0a1628]/70 leading-relaxed">
+              <p className="mt-9 text-[#161616]/70 leading-relaxed">
                 With detailed documentation, reference apps, and 24/7
                 support, you can launch payments in minutes —{" "}
                 <InlineHighlight>not weeks</InlineHighlight>.
@@ -145,10 +145,10 @@ export default function Developer() {
               {platforms.map((p) => (
                 <div
                   key={p.name}
-                  className="rounded-2xl bg-[#dbe8fa] hover:bg-[#cfe0f8] transition-colors p-6 flex flex-col items-center justify-center gap-3 aspect-square"
+                  className="rounded-2xl bg-[#f7f6f3] hover:bg-[#efe0d8] transition-colors p-6 flex flex-col items-center justify-center gap-3 aspect-square"
                 >
                   {p.icon}
-                  <span className="font-semibold text-[#0a1628] text-sm">
+                  <span className="font-semibold text-[#161616] text-sm">
                     {p.name}
                   </span>
                 </div>
@@ -159,27 +159,27 @@ export default function Developer() {
       </section>
 
       {/* ============ JOIN 493+ BUSINESSES ============ */}
-      <section className="bg-[#0a1628] relative overflow-hidden">
+      <section className="bg-[#f7f6f3] relative overflow-hidden">
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.05]"
+          className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(transparent, transparent 34px, rgba(255,255,255,0.6) 35px)",
+              "repeating-linear-gradient(transparent, transparent 34px, rgba(22,22,22,0.6) 35px)",
           }}
         />
 
         <div className="relative max-w-6xl mx-auto px-8 sm:px-12 py-24 grid lg:grid-cols-[1.05fr_0.95fr] gap-16 items-center">
           <div>
             <h2 className="font-serif text-4xl sm:text-5xl leading-tight">
-              <span className="text-white">Join </span>
-              <span className="bg-gradient-to-r from-[#4ecdc4] to-[#2f9fe0] bg-clip-text text-transparent">
+              <span className="text-[#161616]">Join </span>
+              <span className="bg-gradient-to-r from-[#c9911f] to-[#b37e1a] bg-clip-text text-transparent">
                 493+ Businesses
               </span>
-              <span className="text-white"> Today!</span>
+              <span className="text-[#161616]"> Today!</span>
             </h2>
 
-            <p className="mt-6 text-white/60 text-lg leading-relaxed max-w-lg">
-              Scale faster with <span className="text-[#c9a227] font-semibold">Kubero Pays</span>.
+            <p className="mt-6 text-[#161616]/60 text-lg leading-relaxed max-w-lg">
+              Scale faster with <span className="text-[#b37e1a] font-semibold">Kubero Pays</span>.
               Unlock secure, seamless, and smart payment solutions designed
               for modern businesses.
             </p>
@@ -192,24 +192,24 @@ export default function Developer() {
               ].map((f) => (
                 <div
                   key={f.label}
-                  className="flex items-center gap-4 rounded-xl bg-white/[0.04] border border-white/5 px-6 py-4"
+                  className="flex items-center gap-4 rounded-xl bg-white border border-[#161616]/8 px-6 py-4"
                 >
                   <span
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${f.tone}`}
                   >
                     {f.icon}
                   </span>
-                  <span className="font-semibold text-white">{f.label}</span>
+                  <span className="font-semibold text-[#161616]">{f.label}</span>
                 </div>
               ))}
             </div>
 
             <a
               href="/signup"
-              className="mt-9 inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-bold text-white
-                         bg-gradient-to-r from-[#7b4fe0] to-[#3d7bff]
-                         hover:brightness-110 hover:-translate-y-px transition-all duration-200
-                         shadow-lg shadow-[#3d7bff]/25 cursor-pointer"
+              className="mt-9 inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-bold text-[#161616]
+                         bg-gradient-to-r from-[#c9911f] to-[#b37e1a]
+                         hover:brightness-105 hover:-translate-y-px transition-all duration-200
+                         shadow-lg shadow-[#c9911f]/25 cursor-pointer"
             >
               <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5">
                 <circle cx="9" cy="8" r="3.5" stroke="currentColor" strokeWidth="2" />
@@ -222,18 +222,18 @@ export default function Developer() {
 
           {/* illustration */}
           <div className="flex justify-center">
-            <div className="relative w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] rounded-full bg-[#f3f5f8] shadow-2xl shadow-black/40 overflow-hidden">
+            <div className="relative w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] rounded-full bg-white shadow-xl shadow-black/10 overflow-hidden">
               <svg viewBox="0 0 420 420" className="absolute inset-0 w-full h-full">
-                <ellipse cx="120" cy="90" rx="30" ry="16" fill="#e3e8f0" />
-                <ellipse cx="330" cy="80" rx="26" ry="14" fill="#e3e8f0" />
-                <rect x="20" y="330" width="380" height="70" fill="#e7ecf3" />
-                <rect x="40" y="280" width="24" height="120" fill="#dbe2ec" />
-                <rect x="360" y="260" width="24" height="140" fill="#dbe2ec" />
+                <ellipse cx="120" cy="90" rx="30" ry="16" fill="#ddd6cb" />
+                <ellipse cx="330" cy="80" rx="26" ry="14" fill="#ddd6cb" />
+                <rect x="20" y="330" width="380" height="70" fill="#efe6db" />
+                <rect x="40" y="280" width="24" height="120" fill="#e0d5c0" />
+                <rect x="360" y="260" width="24" height="140" fill="#e0d5c0" />
 
                 {/* person laptop, seated */}
                 <g transform="translate(150,300)">
                   <circle cx="0" cy="-40" r="16" fill="#2b2f3a" />
-                  <rect x="-16" y="-24" width="32" height="46" rx="10" fill="#3d7bff" />
+                  <rect x="-16" y="-24" width="32" height="46" rx="10" fill="#c9911f" />
                   <rect x="-24" y="18" width="48" height="10" rx="4" fill="#2b2f3a" />
                 </g>
 
@@ -248,16 +248,16 @@ export default function Developer() {
                 {/* woman standing w/ phone */}
                 <g transform="translate(300,270)">
                   <circle cx="0" cy="-55" r="15" fill="#3a2a20" />
-                  <path d="M-15 -40 q15 -12 30 0 l3 60 q-18 12 -36 0 z" fill="#3d7bff" />
+                  <path d="M-15 -40 q15 -12 30 0 l3 60 q-18 12 -36 0 z" fill="#c9911f" />
                   <rect x="-14" y="20" width="12" height="55" rx="5" fill="#c98a5c" />
                   <rect x="2" y="20" width="12" height="55" rx="5" fill="#c98a5c" />
                 </g>
 
                 {/* stat card */}
                 <g transform="translate(70,140)">
-                  <rect width="130" height="70" rx="12" fill="#dce7fb" />
-                  <text x="16" y="30" fontSize="22" fontWeight="800" fill="#2f6fd4" fontFamily="sans-serif">167K</text>
-                  <text x="16" y="52" fontSize="13" fill="#5b7aa8" fontFamily="sans-serif">Followers</text>
+                  <rect width="130" height="70" rx="12" fill="#f5ecd8" />
+                  <text x="16" y="30" fontSize="22" fontWeight="800" fill="#b37e1a" fontFamily="sans-serif">167K</text>
+                  <text x="16" y="52" fontSize="13" fill="#8a7f72" fontFamily="sans-serif">Followers</text>
                 </g>
 
                 {/* floating chat bubbles */}
@@ -268,8 +268,8 @@ export default function Developer() {
                   [370, 200],
                 ].map(([x, y], i) => (
                   <g key={i} transform={`translate(${x} ${y})`}>
-                    <rect width="26" height="20" rx="6" fill="#3d7bff" />
-                    <path d="M6 20l0 8 8-8z" fill="#3d7bff" />
+                    <rect width="26" height="20" rx="6" fill="#c9911f" />
+                    <path d="M6 20l0 8 8-8z" fill="#c9911f" />
                     <path d="M6 8h14M6 13h9" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" />
                   </g>
                 ))}

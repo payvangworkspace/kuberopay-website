@@ -40,52 +40,52 @@ const sections = [
 
 export default function PrivacyPolicy() {
   return (
-    <div className="font-sans bg-[#0a1628] min-h-screen">
+    <div className="font-sans bg-white min-h-screen">
       <Navbar />
 
       <section className="relative overflow-hidden">
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.05]"
+          className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(transparent, transparent 34px, rgba(255,255,255,0.6) 35px)",
+              "repeating-linear-gradient(transparent, transparent 34px, rgba(22,22,22,0.6) 35px)",
           }}
         />
 
         <div className="relative max-w-4xl mx-auto px-8 sm:px-12 pt-20 pb-24">
-          <div className="rounded-3xl bg-white/[0.04] border border-white/5 backdrop-blur-sm px-8 sm:px-14 py-14">
-            <h1 className="font-serif text-4xl sm:text-5xl text-white text-center">
+          <div className="rounded-3xl bg-[#f7f6f3] border border-[#161616]/8 px-8 sm:px-14 py-14">
+            <h1 className="font-serif text-4xl sm:text-5xl text-[#161616] text-center">
               Privacy Policy
             </h1>
 
-            <p className="mt-8 text-white/70 leading-relaxed">
-              At <span className="font-semibold text-white">Kubero Pays</span>,
+            <p className="mt-8 text-[#161616]/70 leading-relaxed">
+              At <span className="font-semibold text-[#161616]">Kubero Pays</span>,
               we value your privacy and are committed to protecting your
               personal information. This Privacy Policy explains how we
               collect, use, and safeguard your data when you use our
               services.
             </p>
 
-            <div className="mt-10 divide-y divide-white/5">
+            <div className="mt-10 divide-y divide-[#161616]/8">
               {sections.map((s) => (
                 <div key={s.n} className="py-8 first:pt-0 last:pb-0">
-                  <h2 className="font-serif text-2xl text-[#5fb8ea]">
+                  <h2 className="font-serif text-2xl text-[#b37e1a]">
                     {s.n}. {s.title}
                   </h2>
-                  <p className="mt-3 text-white/70 leading-relaxed">
+                  <p className="mt-3 text-[#161616]/70 leading-relaxed">
                     {s.body}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 pt-8 border-t border-white/5">
-              <p className="text-[#c9a227] font-medium leading-relaxed">
+            <div className="mt-10 pt-8 border-t border-[#161616]/8">
+              <p className="text-[#b37e1a] font-medium leading-relaxed">
                 If you have any questions regarding this Privacy Policy,
                 please contact us at{" "}
                 <a
                   href="mailto:support@kuberopays.com"
-                  className="underline underline-offset-2 hover:text-[#e0bb3f] transition-colors"
+                  className="underline underline-offset-2 hover:text-[#c9911f] transition-colors"
                 >
                   support@kuberopays.com
                 </a>

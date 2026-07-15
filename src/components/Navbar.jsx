@@ -45,7 +45,7 @@ function Logo() {
       <img
         src="/Kuberopay_logo.png"
         alt="Kubero Pays"
-        className="h-20 w-auto"
+        className="h-24 w-auto"
       />
     </a>
   );
@@ -77,7 +77,7 @@ function NavItem({ label, href, items, noChevron }) {
     return (
       <a
         href={href}
-        className="flex items-center gap-1 text-sm text-white/80 hover:text-white transition-colors"
+        className="flex items-center gap-1 text-sm text-[#3a0f1f]/80 hover:text-[#3a0f1f] transition-colors"
       >
         {label}
       </a>
@@ -86,7 +86,7 @@ function NavItem({ label, href, items, noChevron }) {
 
   return (
     <div className="group relative">
-      <button className="flex items-center gap-1 text-sm text-white/80 hover:text-white transition-colors py-2 cursor-pointer">
+      <button className="flex items-center gap-1 text-sm text-[#3a0f1f]/80 hover:text-[#3a0f1f] transition-colors py-2 cursor-pointer">
         {label}
         {!noChevron && <ChevronDown />}
       </button>
@@ -99,12 +99,12 @@ function NavItem({ label, href, items, noChevron }) {
                    group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
                    transition-all duration-200 z-50"
       >
-        <div className="min-w-55 bg-white rounded-2xl shadow-2xl shadow-black/30 border border-black/5 py-2 overflow-hidden">
+        <div className="min-w-55 bg-white rounded-2xl shadow-2xl shadow-black/10 border border-black/5 py-2 overflow-hidden">
           {items.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="block px-5 py-3 text-sm font-medium text-[#0a1628] hover:bg-[#4ecdc4]/10 hover:text-[#0f8f86] transition-colors"
+              className="block px-5 py-3 text-sm font-medium text-[#3a0f1f] hover:bg-[#c9911f]/10 hover:text-[#9c1c42] transition-colors"
             >
               {item.label}
             </a>
@@ -120,16 +120,16 @@ function MobileAccordionItem({ label, href, items }) {
 
   if (!items) {
     return (
-      <a href={href} className="block text-sm text-white/80 hover:text-white py-2">
+      <a href={href} className="block text-sm text-[#3a0f1f]/80 hover:text-[#3a0f1f] py-2">
         {label}
       </a>
     );
   }
 
   return (
-    <div className="border-b border-white/5 last:border-b-0">
+    <div className="border-b border-black/5 last:border-b-0">
       <button
-        className="w-full flex items-center justify-between text-sm text-white/80 hover:text-white py-3 cursor-pointer"
+        className="w-full flex items-center justify-between text-sm text-[#3a0f1f]/80 hover:text-[#3a0f1f] py-3 cursor-pointer"
         onClick={() => setOpen(!open)}
       >
         {label}
@@ -142,7 +142,7 @@ function MobileAccordionItem({ label, href, items }) {
             <a
               key={item.label}
               href={item.href}
-              className="block text-sm text-white/60 hover:text-white py-1"
+              className="block text-sm text-[#3a0f1f]/60 hover:text-[#3a0f1f] py-1"
             >
               {item.label}
             </a>
@@ -157,8 +157,8 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a1628]/80 backdrop-blur-md border-b border-white/5">
-      <nav className="grid grid-cols-[1fr_auto_1fr] items-center max-w-360 mx-auto h-24 px-8 sm:px-12 lg:px-20 xl:px-28">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-black/5 shadow-sm shadow-black/5">
+      <nav className="grid grid-cols-[1fr_auto_1fr] items-center max-w-360 mx-auto h-28 px-8 sm:px-12 lg:px-20 xl:px-28">
         {/* Logo */}
         <div className="justify-self-start">
           <Logo />
@@ -177,14 +177,14 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center justify-self-end gap-5">
           <a
             href="/signin"
-            className="px-6 py-2.5 text-sm font-medium text-white/90 border border-white/20 rounded-full hover:border-[#4ecdc4]/70 hover:text-white hover:bg-[#4ecdc4]/10 transition-all duration-200 cursor-pointer"
+            className="px-6 py-2.5 text-sm font-medium text-[#3a0f1f] border border-black/15 rounded-full hover:border-[#c9911f]/70 hover:text-[#3a0f1f] hover:bg-[#c9911f]/10 transition-all duration-200 cursor-pointer"
           >
             Sign In
           </a>
 
           <a
             href="/signup"
-            className="px-6 py-2.5 text-sm font-semibold text-[#0a1628] bg-[#4ecdc4] rounded-full shadow-md shadow-[#4ecdc4]/20 hover:bg-[#3dbdb5] hover:shadow-lg hover:shadow-[#4ecdc4]/30 hover:-translate-y-px transition-all duration-200 cursor-pointer"
+            className="px-6 py-2.5 text-sm font-semibold text-white bg-[#9c1c42] rounded-full shadow-md shadow-[#9c1c42]/20 hover:bg-[#801636] hover:shadow-lg hover:shadow-[#9c1c42]/30 hover:-translate-y-px transition-all duration-200 cursor-pointer"
           >
             Sign Up
           </a>
@@ -192,7 +192,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-white justify-self-end"
+          className="lg:hidden text-[#3a0f1f] justify-self-end"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle Menu"
         >
@@ -223,22 +223,22 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[#0a1628] border-t border-white/5 px-8 py-4">
+        <div className="lg:hidden bg-white border-t border-black/5 px-8 py-4">
           {navLinks.map((link) => (
             <MobileAccordionItem key={link.label} {...link} />
           ))}
 
-          <div className="flex gap-4 pt-5 mt-2 border-t border-white/5">
+          <div className="flex gap-4 pt-5 mt-2 border-t border-black/5">
             <a
               href="/signin"
-              className="flex-1 text-center px-5 py-2.5 text-sm font-medium text-white/90 border border-white/20 rounded-full"
+              className="flex-1 text-center px-5 py-2.5 text-sm font-medium text-[#3a0f1f] border border-black/15 rounded-full"
             >
               Sign In
             </a>
 
             <a
               href="/signup"
-              className="flex-1 text-center px-5 py-2.5 text-sm font-semibold text-[#0a1628] bg-[#4ecdc4] rounded-full"
+              className="flex-1 text-center px-5 py-2.5 text-sm font-semibold text-white bg-[#9c1c42] rounded-full"
             >
               Sign Up
             </a>
