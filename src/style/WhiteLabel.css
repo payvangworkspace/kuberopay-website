@@ -1,0 +1,39 @@
+/* ===========================
+   WHITE LABEL SOLUTIONS PAGE
+=========================== */
+
+.white-label-section{
+    animation:wl-fade-in .5s ease both;
+}
+
+@keyframes wl-fade-in{
+    from{
+        opacity:0;
+        transform:translateY(16px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.wl-float{
+    animation:wl-float 4s ease-in-out infinite;
+}
+
+.wl-float-delay{
+    animation:wl-float 4s ease-in-out infinite;
+    animation-delay:1.2s;
+}
+
+@keyframes wl-float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}

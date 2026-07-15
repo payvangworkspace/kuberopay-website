@@ -1,0 +1,144 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.site-footer *{
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.site-footer{
+    background:linear-gradient(160deg,#0a1330,#111d47 55%,#0a1330);
+    padding:80px 32px 0;
+}
+
+.footer-container{
+    max-width:1280px;
+    margin:0 auto;
+    padding-bottom:70px;
+}
+
+/* ===========================
+   BRAND
+=========================== */
+
+.footer-brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:56px;
+}
+
+.footer-logo-icon{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#e0a63a,#c8862a);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0a1330;
+    flex-shrink:0;
+}
+
+.footer-brand h3{
+    color:#e5b654;
+    font-size:22px;
+    font-weight:700;
+    font-family:"Georgia", serif;
+}
+
+.footer-brand span{
+    display:block;
+    margin-top:2px;
+    color:#94a3b8;
+    font-size:10.5px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+/* ===========================
+   CONTACT DETAILS
+=========================== */
+
+.footer-contact{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.contact-row{
+    display:flex;
+    align-items:flex-start;
+    gap:16px;
+}
+
+.contact-icon{
+    color:#e0a63a;
+    font-size:18px;
+    margin-top:3px;
+    flex-shrink:0;
+}
+
+.contact-row p{
+    color:#e2e8f0;
+    font-size:16px;
+    line-height:1.7;
+    margin:0;
+}
+
+.contact-row a{
+    color:#5eb3f0;
+    font-size:16px;
+    text-decoration:none;
+}
+
+.contact-row a:hover{
+    text-decoration:underline;
+}
+
+.lei-text{
+    color:#ffffff;
+    font-size:15px;
+    font-weight:700;
+}
+
+/* ===========================
+   BOTTOM BAR
+=========================== */
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding:26px 0;
+    text-align:center;
+}
+
+.footer-bottom p{
+    color:#94a3b8;
+    font-size:14px;
+    line-height:1.8;
+    margin:0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:600px){
+
+.site-footer{
+    padding:60px 20px 0;
+}
+
+.footer-brand{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+}

@@ -1,0 +1,163 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.services-section *{
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+.services-section{
+    background:#ffffff;
+    padding:110px 0;
+}
+
+.services-container{
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 32px;
+}
+
+/* ===========================
+   HEADING
+=========================== */
+
+.services-heading{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 64px;
+}
+
+.services-heading h2{
+    font-size:42px;
+    font-weight:700;
+    color:#1f2937;
+    letter-spacing:-0.5px;
+}
+
+.services-heading p{
+    margin-top:20px;
+    font-size:17px;
+    line-height:1.8;
+    color:#6b7280;
+}
+
+/* ===========================
+   CARDS GRID
+=========================== */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:32px;
+}
+
+.service-card{
+    background:#ffffff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(15,23,42,.08);
+    border:1px solid #eef1f8;
+    transition:.3s;
+    min-width:0;
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(15,23,42,.12);
+}
+
+.service-image-wrap{
+    height:230px;
+    overflow:hidden;
+}
+
+.service-image-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.6s;
+}
+
+.service-card:hover .service-image-wrap img{
+    transform:scale(1.06);
+}
+
+.service-body{
+    padding:32px;
+    text-align:center;
+}
+
+.service-body h3{
+    font-size:22px;
+    font-weight:700;
+    color:#1f2937;
+    line-height:1.35;
+}
+
+.service-body p{
+    margin-top:14px;
+    color:#6b7280;
+    font-size:15.5px;
+    line-height:1.7;
+}
+
+.service-link{
+    margin-top:22px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    background:none;
+    border:none;
+    cursor:pointer;
+
+    color:#e11d48;
+    font-weight:700;
+    font-size:15.5px;
+
+    transition:.25s;
+}
+
+.service-link:hover{
+    gap:12px;
+    color:#be123c;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1024px){
+
+.services-grid{
+    grid-template-columns:1fr 1fr;
+}
+
+.services-heading h2{
+    font-size:36px;
+}
+
+}
+
+@media (max-width:640px){
+
+.services-section{
+    padding:70px 0;
+}
+
+.services-grid{
+    grid-template-columns:1fr;
+}
+
+.services-heading h2{
+    font-size:30px;
+}
+
+}

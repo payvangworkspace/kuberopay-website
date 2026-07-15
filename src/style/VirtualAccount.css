@@ -1,0 +1,39 @@
+/* ===========================
+   VIRTUAL ACCOUNT PAGE
+=========================== */
+
+.virtual-account-section{
+    animation:va-fade-in .5s ease both;
+}
+
+@keyframes va-fade-in{
+    from{
+        opacity:0;
+        transform:translateY(16px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.va-float{
+    animation:va-float 4s ease-in-out infinite;
+}
+
+.va-float-delay{
+    animation:va-float 4s ease-in-out infinite;
+    animation-delay:1.3s;
+}
+
+@keyframes va-float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}

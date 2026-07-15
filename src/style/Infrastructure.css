@@ -1,0 +1,333 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.infra-section *{
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+.infra-section{
+    background:linear-gradient(160deg,#0a1e42,#0f2a5c 60%,#0a1e42);
+    padding:110px 0;
+    overflow:hidden;
+}
+
+.infra-container{
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 32px;
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+
+/* ===========================
+   LEFT CONTENT
+=========================== */
+
+.infra-left{
+    flex:1;
+    min-width:0;
+}
+
+.infra-left h2{
+    font-size:46px;
+    font-weight:800;
+    line-height:1.2;
+    color:#4db3f0;
+    letter-spacing:-1px;
+    max-width:560px;
+}
+
+.infra-left p{
+    margin-top:24px;
+    color:#cbd9ef;
+    font-size:17px;
+    line-height:1.8;
+    max-width:560px;
+}
+
+/* ===========================
+   FEATURE GRID
+=========================== */
+
+.infra-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    max-width:640px;
+}
+
+.infra-pill{
+    display:flex;
+    align-items:center;
+    gap:16px;
+
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;
+
+    padding:20px 22px;
+
+    color:#ffffff;
+    font-size:16.5px;
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.infra-pill:hover{
+    background:rgba(255,255,255,.1);
+    transform:translateY(-3px);
+}
+
+.infra-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#4db3f0;
+    flex-shrink:0;
+}
+
+/* ===========================
+   RIGHT VISUAL
+=========================== */
+
+.infra-right{
+    flex:1;
+    min-width:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.device-stack{
+    position:relative;
+    width:100%;
+    max-width:520px;
+    height:460px;
+}
+
+/* ---- Tablet (isometric grid) ---- */
+
+.tablet{
+    position:absolute;
+    top:40px;
+    left:0;
+    width:420px;
+    height:420px;
+    transform:rotateX(55deg) rotateZ(45deg);
+    transform-style:preserve-3d;
+}
+
+.tablet-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    width:100%;
+    height:100%;
+    background:#f4f6fb;
+    border-radius:24px;
+    padding:14px;
+    box-shadow:0 40px 80px rgba(0,0,0,.45);
+}
+
+.tile{
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:rgba(255,255,255,.9);
+}
+
+/* ---- Phone ---- */
+
+.phone{
+    position:absolute;
+    top:150px;
+    left:110px;
+    width:230px;
+    background:#ffffff;
+    border-radius:20px;
+    padding:20px 18px;
+    box-shadow:0 30px 60px rgba(0,0,0,.4);
+    transform:rotate(-18deg) skewY(-6deg);
+    z-index:5;
+}
+
+.phone-header{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    font-weight:700;
+    color:#0f172a;
+}
+
+.phone-logo-dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#4db3f0);
+    display:inline-block;
+}
+
+.phone-sub{
+    font-size:10px;
+    color:#94a3b8;
+    margin-bottom:14px;
+    margin-top:2px;
+}
+
+.phone-field{
+    margin-bottom:12px;
+}
+
+.phone-field span{
+    font-size:9.5px;
+    color:#94a3b8;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.phone-line{
+    margin-top:6px;
+    height:8px;
+    border-radius:4px;
+    background:#eef2f7;
+}
+
+.phone-row{
+    display:flex;
+    gap:10px;
+}
+
+.phone-field.small{
+    flex:1;
+}
+
+.phone-pay-btn{
+    margin-top:16px;
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* ---- Credit Card ---- */
+
+.credit-card{
+    position:absolute;
+    top:20px;
+    right:40px;
+    width:190px;
+    height:120px;
+    background:linear-gradient(135deg,#ffffff,#e7ecf5);
+    border-radius:14px;
+    padding:16px 18px;
+    box-shadow:0 25px 45px rgba(0,0,0,.35);
+    transform:rotate(18deg) skewY(-6deg);
+    z-index:8;
+}
+
+.credit-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.chip{
+    width:26px;
+    height:19px;
+    border-radius:4px;
+    background:linear-gradient(135deg,#e4c05a,#c8992f);
+    display:inline-block;
+}
+
+.brand{
+    font-size:15px;
+    font-weight:800;
+    font-style:italic;
+    color:#1a3a8f;
+}
+
+.credit-card-number{
+    margin-top:26px;
+    font-size:12px;
+    letter-spacing:1.5px;
+    color:#334155;
+    font-weight:600;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1100px){
+
+.infra-container{
+    flex-direction:column;
+}
+
+.infra-left h2,
+.infra-left p,
+.infra-grid{
+    max-width:100%;
+}
+
+.infra-right{
+    margin-top:60px;
+}
+
+}
+
+@media (max-width:600px){
+
+.infra-section{
+    padding:70px 0;
+}
+
+.infra-left h2{
+    font-size:32px;
+}
+
+.infra-grid{
+    grid-template-columns:1fr;
+}
+
+.device-stack{
+    max-width:100%;
+    height:380px;
+}
+
+.tablet{
+    width:320px;
+    height:320px;
+    left:-10px;
+}
+
+.phone{
+    left:60px;
+    top:120px;
+    width:190px;
+}
+
+.credit-card{
+    right:0px;
+    width:150px;
+    height:100px;
+}
+
+}

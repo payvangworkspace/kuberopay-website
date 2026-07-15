@@ -1,0 +1,57 @@
+/* ===========================
+   INVOICE PAGE
+   Supplementary styles that go beyond
+   plain Tailwind utilities.
+=========================== */
+
+/* Gentle fade-and-rise entrance for the whole section */
+.invoice-section{
+    animation:inv-fade-in .5s ease both;
+}
+
+@keyframes inv-fade-in{
+    from{
+        opacity:0;
+        transform:translateY(16px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Floating animation for the small illustration badges */
+.inv-float{
+    animation:inv-float 4s ease-in-out infinite;
+}
+
+.inv-float-delay{
+    animation:inv-float 4s ease-in-out infinite;
+    animation-delay:1.4s;
+}
+
+@keyframes inv-float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* Slight breathing lift for the phone/checkout card */
+.inv-checkout-card{
+    animation:inv-lift 5s ease-in-out infinite;
+}
+
+@keyframes inv-lift{
+    0%, 100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-6px);
+    }
+}
