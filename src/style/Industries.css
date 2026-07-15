@@ -13,7 +13,7 @@
 =========================== */
 
 .industries-section{
-    background:linear-gradient(160deg,#0a1330,#111d47 55%,#0a1330);
+    background:linear-gradient(160deg,#ffffff,#f7f6f3 55%,#ffffff);
     padding:120px 32px;
     text-align:center;
 }
@@ -29,7 +29,7 @@
 
 .industries-eyebrow{
     display:inline-block;
-    color:#4db3f0;
+    color:#c9911f;
     font-weight:700;
     text-transform:uppercase;
     letter-spacing:3px;
@@ -40,7 +40,7 @@
     margin-top:20px;
     font-size:44px;
     font-weight:800;
-    color:#ffffff;
+    color:#161616;
     line-height:1.3;
     letter-spacing:-0.5px;
 }
@@ -48,7 +48,7 @@
 .industries-container > p{
     margin:26px auto 0;
     max-width:760px;
-    color:#cbd5e1;
+    color:rgba(22,22,22,.6);
     font-size:17px;
     line-height:1.8;
 }
@@ -65,8 +65,8 @@
 }
 
 .industry-card{
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,255,255,.08);
+    background:#ffffff;
+    border:1px solid rgba(22,22,22,.08);
     border-radius:20px;
     padding:38px 26px;
     min-width:0;
@@ -74,7 +74,8 @@
 }
 
 .industry-card:hover{
-    background:rgba(255,255,255,.07);
+    background:#f7f6f3;
+    border-color:rgba(201,145,31,.35);
     transform:translateY(-6px);
 }
 
@@ -82,12 +83,12 @@
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    color:#4db3f0;
+    color:#c9911f;
     margin-bottom:22px;
 }
 
 .industry-card h3{
-    color:#ffffff;
+    color:#161616;
     font-size:21px;
     font-weight:700;
     line-height:1.35;
@@ -95,7 +96,7 @@
 
 .industry-card p{
     margin-top:16px;
-    color:#b9c4d6;
+    color:rgba(22,22,22,.6);
     font-size:14.5px;
     line-height:1.75;
 }

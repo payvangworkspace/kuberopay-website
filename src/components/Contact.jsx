@@ -2,9 +2,7 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 
 function FieldIcon({ children }) {
-  return (
-    <span className="text-[#4ecdc4] shrink-0 mt-0.5">{children}</span>
-  );
+  return <span className="text-[#c9911f] shrink-0 mt-0.5">{children}</span>;
 }
 
 const icons = {
@@ -46,13 +44,13 @@ const icons = {
 function Field({ icon, placeholder, textarea, ...props }) {
   const Tag = textarea ? "textarea" : "input";
   return (
-    <label className="flex items-start gap-4 rounded-2xl bg-white/[0.04] border border-white/10 focus-within:border-[#4ecdc4]/60 px-6 py-4 transition-colors">
+    <label className="flex items-start gap-4 rounded-2xl bg-white border border-[#161616]/10 focus-within:border-[#c9911f]/60 px-6 py-4 transition-colors">
       <FieldIcon>{icon}</FieldIcon>
       <Tag
         {...props}
         placeholder={placeholder}
         rows={textarea ? 5 : undefined}
-        className="w-full bg-transparent text-white placeholder:text-white/35 focus:outline-none resize-none"
+        className="w-full bg-transparent text-[#161616] placeholder:text-[#161616]/35 focus:outline-none resize-none"
       />
     </label>
   );
@@ -62,33 +60,37 @@ export default function Contact() {
   const [sent, setSent] = useState(false);
 
   return (
-    <div className="font-sans bg-[#0a1628] min-h-screen">
+    <div className="font-sans bg-white min-h-screen">
       <Navbar />
+
+      {/* spacer + visible partition between the navbar and the page content */}
+      <div className="h-6" />
+      <div className="h-px w-full bg-[#161616]/10" />
 
       <section className="relative overflow-hidden">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(50% 40% at 50% 20%, rgba(78,205,196,0.10) 0%, transparent 70%)",
+              "radial-gradient(50% 40% at 50% 20%, rgba(201,145,31,0.10) 0%, transparent 70%)",
           }}
         />
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.05]"
+          className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(transparent, transparent 34px, rgba(255,255,255,0.6) 35px)",
+              "repeating-linear-gradient(transparent, transparent 34px, rgba(22,22,22,0.6) 35px)",
           }}
         />
 
-        <div className="relative max-w-6xl mx-auto px-8 sm:px-12 pt-24 pb-24">
-          <div className="rounded-3xl bg-white/[0.03] border border-white/5 shadow-2xl shadow-black/40 p-8 sm:p-14 grid lg:grid-cols-2 gap-14">
+        <div className="relative max-w-6xl mx-auto px-8 sm:px-12 pt-28 pb-24">
+          <div className="rounded-3xl bg-[#f7f6f3] border border-[#161616]/8 shadow-xl shadow-black/5 p-8 sm:p-14 grid lg:grid-cols-2 gap-14">
             {/* left: info */}
             <div>
-              <h1 className="font-serif text-4xl sm:text-5xl bg-gradient-to-r from-[#4ecdc4] to-[#2f9fe0] bg-clip-text text-transparent">
+              <h1 className="font-serif text-4xl sm:text-5xl bg-gradient-to-r from-[#c9911f] to-[#b37e1a] bg-clip-text text-transparent">
                 Get in Touch
               </h1>
-              <p className="mt-6 text-white/60 text-lg leading-relaxed max-w-md">
+              <p className="mt-6 text-[#161616]/60 text-lg leading-relaxed max-w-md">
                 We're here to answer your questions, discuss partnership
                 opportunities, or provide support. Let's make something
                 great together!
@@ -97,7 +99,7 @@ export default function Contact() {
               <div className="mt-10 space-y-6">
                 <div className="flex items-start gap-4">
                   <FieldIcon>{icons.pin}</FieldIcon>
-                  <p className="text-white/80 leading-relaxed">
+                  <p className="text-[#161616]/80 leading-relaxed">
                     91 Springboard, Sector 44,
                     <br />
                     Temporary Address, India
@@ -106,12 +108,12 @@ export default function Contact() {
 
                 <div className="flex items-center gap-4">
                   <FieldIcon>{icons.phone}</FieldIcon>
-                  <p className="text-white/80">+91 98765 43210</p>
+                  <p className="text-[#161616]/80">+91 98765 43210</p>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <FieldIcon>{icons.mail}</FieldIcon>
-                  <p className="text-white/80">info@kuberopays.com</p>
+                  <p className="text-[#161616]/80">info@kuberopays.com</p>
                 </div>
               </div>
             </div>
@@ -130,10 +132,10 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-bold text-[#0a1628]
-                           bg-gradient-to-r from-[#4ecdc4] to-[#2f9fe0]
+                className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-bold text-white
+                           bg-gradient-to-r from-[#c9911f] to-[#b37e1a]
                            hover:brightness-105 hover:-translate-y-px transition-all duration-200
-                           shadow-lg shadow-[#4ecdc4]/20 cursor-pointer"
+                           shadow-lg shadow-[#c9911f]/25 cursor-pointer"
               >
                 {icons.send}
                 {sent ? "Message Sent!" : "Send Message"}

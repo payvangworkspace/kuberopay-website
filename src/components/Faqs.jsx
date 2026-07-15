@@ -88,6 +88,10 @@ export default function Faqs() {
     <div className="font-sans bg-white min-h-screen">
       <Navbar />
 
+      {/* spacer + visible partition between the navbar and the page content */}
+      <div className="h-6" />
+      <div className="h-px w-full bg-[#161616]/10" />
+
       <section className="relative overflow-hidden">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.04]"
@@ -97,7 +101,7 @@ export default function Faqs() {
           }}
         />
 
-        <div className="relative max-w-6xl mx-auto px-8 sm:px-12 pt-20 pb-24 grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-start">
+        <div className="relative max-w-6xl mx-auto px-8 sm:px-12 pt-28 pb-24 grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-start">
           <div>
             <h1 className="font-serif text-4xl sm:text-5xl leading-tight">
               <span className="bg-gradient-to-r from-[#c9911f] to-[#b37e1a] bg-clip-text text-transparent">

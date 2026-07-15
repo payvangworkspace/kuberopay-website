@@ -117,6 +117,10 @@ export default function Company() {
     <div className="font-sans bg-white min-h-screen">
       <Navbar />
 
+      {/* spacer + visible partition between the navbar and the page content */}
+      <div className="h-6" />
+      <div className="h-px w-full bg-[#161616]/10" />
+
       <section className="relative overflow-hidden">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.04]"
@@ -126,11 +130,11 @@ export default function Company() {
           }}
         />
 
-        <div className="relative max-w-5xl mx-auto px-8 sm:px-12 pt-20 pb-24">
+        <div className="relative max-w-5xl mx-auto px-8 sm:px-12 pt-28 pb-24">
           <h1 className="text-center font-serif text-4xl sm:text-5xl">
             <span className="text-[#161616]">About </span>
             <span className="bg-gradient-to-r from-[#c9911f] to-[#b37e1a] bg-clip-text text-transparent">
-              Kuber Payss
+              Kubero Pays
             </span>
           </h1>
 

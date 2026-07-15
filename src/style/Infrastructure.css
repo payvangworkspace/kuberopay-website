@@ -13,7 +13,7 @@
 =========================== */
 
 .infra-section{
-    background:linear-gradient(160deg,#0a1e42,#0f2a5c 60%,#0a1e42);
+    background:linear-gradient(160deg,#ffffff,#f7f6f3 60%,#ffffff);
     padding:110px 0;
     overflow:hidden;
 }
@@ -40,14 +40,18 @@
     font-size:46px;
     font-weight:800;
     line-height:1.2;
-    color:#4db3f0;
     letter-spacing:-1px;
     max-width:560px;
+
+    background:linear-gradient(90deg,#c9911f,#b37e1a);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
 }
 
 .infra-left p{
     margin-top:24px;
-    color:#cbd9ef;
+    color:rgba(22,22,22,.6);
     font-size:17px;
     line-height:1.8;
     max-width:560px;
@@ -70,13 +74,13 @@
     align-items:center;
     gap:16px;
 
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.08);
+    background:#ffffff;
+    border:1px solid rgba(22,22,22,.08);
     border-radius:16px;
 
     padding:20px 22px;
 
-    color:#ffffff;
+    color:#161616;
     font-size:16.5px;
     font-weight:700;
 
@@ -84,7 +88,8 @@
 }
 
 .infra-pill:hover{
-    background:rgba(255,255,255,.1);
+    background:#f7f6f3;
+    border-color:rgba(201,145,31,.35);
     transform:translateY(-3px);
 }
 
@@ -92,7 +97,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#4db3f0;
+    color:#c9911f;
     flex-shrink:0;
 }
 
@@ -133,10 +138,11 @@
     gap:10px;
     width:100%;
     height:100%;
-    background:#f4f6fb;
+    background:#12233f;
+    border:1px solid #22385c;
     border-radius:24px;
     padding:14px;
-    box-shadow:0 40px 80px rgba(0,0,0,.45);
+    box-shadow:0 40px 80px rgba(22,22,22,.22);
 }
 
 .tile{
@@ -155,9 +161,10 @@
     left:110px;
     width:230px;
     background:#ffffff;
+    border:1px solid rgba(22,22,22,.08);
     border-radius:20px;
     padding:20px 18px;
-    box-shadow:0 30px 60px rgba(0,0,0,.4);
+    box-shadow:0 30px 60px rgba(22,22,22,.18);
     transform:rotate(-18deg) skewY(-6deg);
     z-index:5;
 }
@@ -168,20 +175,20 @@
     gap:8px;
     font-size:12px;
     font-weight:700;
-    color:#0f172a;
+    color:#161616;
 }
 
 .phone-logo-dot{
     width:14px;
     height:14px;
     border-radius:50%;
-    background:linear-gradient(135deg,#2563eb,#4db3f0);
+    background:linear-gradient(135deg,#c9911f,#b37e1a);
     display:inline-block;
 }
 
 .phone-sub{
     font-size:10px;
-    color:#94a3b8;
+    color:rgba(22,22,22,.42);
     margin-bottom:14px;
     margin-top:2px;
 }
@@ -192,7 +199,7 @@
 
 .phone-field span{
     font-size:9.5px;
-    color:#94a3b8;
+    color:rgba(22,22,22,.42);
     text-transform:uppercase;
     letter-spacing:.5px;
 }
@@ -201,7 +208,7 @@
     margin-top:6px;
     height:8px;
     border-radius:4px;
-    background:#eef2f7;
+    background:#f0eeea;
 }
 
 .phone-row{
@@ -219,7 +226,7 @@
     padding:10px;
     border:none;
     border-radius:10px;
-    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    background:linear-gradient(135deg,#c9911f,#b37e1a);
     color:#fff;
     font-size:13px;
     font-weight:700;
@@ -234,10 +241,11 @@
     right:40px;
     width:190px;
     height:120px;
-    background:linear-gradient(135deg,#ffffff,#e7ecf5);
+    background:linear-gradient(135deg,#ffffff,#f0eeea);
+    border:1px solid rgba(22,22,22,.08);
     border-radius:14px;
     padding:16px 18px;
-    box-shadow:0 25px 45px rgba(0,0,0,.35);
+    box-shadow:0 25px 45px rgba(22,22,22,.18);
     transform:rotate(18deg) skewY(-6deg);
     z-index:8;
 }
@@ -260,14 +268,14 @@
     font-size:15px;
     font-weight:800;
     font-style:italic;
-    color:#1a3a8f;
+    color:#b37e1a;
 }
 
 .credit-card-number{
     margin-top:26px;
     font-size:12px;
     letter-spacing:1.5px;
-    color:#334155;
+    color:rgba(22,22,22,.7);
     font-weight:600;
 }
 
