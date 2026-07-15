@@ -124,8 +124,7 @@ export default function Hero() {
         <div className="max-w-xl mx-auto lg:mx-0 lg:ml-4 xl:ml-8 flex flex-col gap-10">
           <div className="space-y-6">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold leading-[1.15] text-white tracking-tight">
-              Powering Payments in{' '}
-              <span className="text-[#4ecdc4]">India</span>
+              Powering Payments
             </h1>
 
             <p className="text-base sm:text-lg text-white/70 leading-relaxed max-w-md">
